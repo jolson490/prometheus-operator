@@ -172,9 +172,11 @@ spec:
             memory: 180Mi
         volumeMounts:
         - mountPath: /host/proc
+          mountPropagation: HostToContainer
           name: proc
           readOnly: false
         - mountPath: /host/sys
+          mountPropagation: HostToContainer
           name: sys
           readOnly: false
       - args:
